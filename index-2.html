@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> SITUR - Sistema de Infromación Turística Urbana - Rual del Distrito Metropolitano de Quito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style css -->
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .boton-flotante {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f9f9;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .main-title {
+            color: #2d2d2d;
+            text-align: center;
+            text-transform: capitalize;
+            padding: 0.7em 0;
+        }
+
+        .content {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content .content-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 7cqi;
+            width: 35%;
+            left: 24%;
+            top: 1;
+            bottom: 0;
+            right: 0%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+
+        .content .content-overlay-2 {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 99%;
+            width: 55%;
+            left: 22%;
+            top: 1;
+            bottom: 0;
+            right: 0%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay-2 {
+            opacity: 1;
+        }
+
+        .content .content-overlay-3 {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 99%;
+            width: 55%;
+            left: 40%;
+            top: 1;
+            bottom: 0;
+            right: 0%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay-3 {
+            opacity: 1;
+        }
+
+        .content .content-overlay-4 {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 99%;
+            width: 60%;
+            left: 43%;
+            top: 1;
+            bottom: 0;
+            right: 0%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay-4 {
+            opacity: 1;
+        }
+
+
+
+        .content-image {
+            width: 100%;
+        }
+
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .content:hover .content-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        .content-details h3 {
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+
+        .content-details p {
+            color: #fff;
+            font-size: 0.19em;
+        }
+
+        .fadeIn-bottom {
+            top: 80%;
+        }
+
+        .fadeIn-top {
+            top: 20%;
+        }
+
+        .fadeIn-left {
+            left: 20%;
+        }
+
+        .fadeIn-right {
+            left: 80%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <section class="py-20 overflow-hidden relative">
+        <div class="container">
+            <div class="rounded-3xl bg-white md:p-16 p-10 print:p-0 print:bg-black">
+                <div class="mt-0">
+                    <img src="assets/images/situr_web_2-01.png" alt="">
+                    <img src="assets/images/situr_web_2-02.png" alt="">
+                    <div class="content">
+                          <div class="content-overlay"></div>
+                          <img class="content-image"  title="This is a title" src="assets/images/situr_web_2-03.png">
+                          <div class="content-details fadeIn-bottom">
+                            <p class="content-text">Los datos relacionados con la población y la estructura socioeconómica del Distrito Metropolitano de Quito incluyen información demográfica como la población total, la composición por edades y sexo, así como datos socioeconómicos relacionados al mercado laboral y la sectorización de los empleados, que detalla los datos principales de las parroquias rurales de Quito.
+                            </p>
+                          </div>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay-2"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-04.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay-3"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-05.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay-4"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-06.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-07.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-08.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="content">
+                        <div class="content-overlay"></div>
+                        <img class="content-image" src="assets/images/situr_web_2-09.png">
+                        <div class="content-details fadeIn-bottom">
+                          <h3 class="content-title">This is a title</h3>
+                          <p class="content-text">This is a short description</p>
+                        </div>
+                      </a>
+                    </div>
+                    <img src="assets/images/situr_web_2-10.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="boton-flotante">Ingreso al Sistema</button>
+</body>
+
+</html>
